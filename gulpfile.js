@@ -8,7 +8,7 @@ var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
     var plugins = [
-        autoprefixer({browsers: ['last 2 versions', 'ie >= 9']})
+        autoprefixer({browsers: ['last 2 versions', 'ie >= 9'], grid: true})
     ];
     return gulp.src('./sass/*.scss')
         /* .pipe(sourcemaps.init()) */

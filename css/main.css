@@ -42,9 +42,12 @@ table {
   border-spacing: 0; }
 
 .grid_wrapper {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 100px);
+  -ms-grid-columns: 100px 15px 100px;
   grid-template-rows: repeat(2, 100px);
+  -ms-grid-rows: 100px 15px 100px;
   grid-gap: 15px; }
 
 .grid_wrapper div {
@@ -53,5 +56,8 @@ table {
   color: red; }
 
 .grid_wrapper div:nth-child(2) {
+  -ms-grid-column: 3;
   grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   grid-row: 1 / span 2; }
